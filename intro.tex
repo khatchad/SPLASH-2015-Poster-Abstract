@@ -14,26 +14,20 @@ anonymous inner classes and make it easier to iterate through, filter, and
 exact data from a \lstinline{Collection}~\cite{lambdaqs}.
 
 Eclipse\footnote{\url{http://eclipse.org}} is one of the most popular IDEs for
-Java. While Eclipse has incorporated several Java 8 feature quick-fixes and
-refactorings, there are still many features left to be done. For example, the
-NetBeans IDE\footnote{\url{http://netbeans.org}} has a refactoring (originally
-proposed by \citet{gyori2013}) that converts enhanced \lstinline{for} loops to
-a lambda expression.  This paper discusses our ongoing work in exploring the
-porting of such conversion mechanisms from NetBeans to the Eclipse IDE\@.
-These will be manifested as a refactoring and a quick-fix\footnote{Quick-fixes
-in Eclipse are content-assisted completions that help developers maintain and
-improve their code.}, and will help Eclipse developers adapt the
-functional-like programming model offered by Java 8. Furthermore, we are in
-the process of exploring other Java 8 refactorings that do not currently exist
-in any IDE\@.
+Java. While Eclipse has incorporated several Java 8 feature
+quick-fixes\footnote{Quick-fixes in Eclipse are content-assisted completions
+that help developers maintain and improve their code.} and refactorings, there
+are still many features left to be done. For example, the NetBeans
+IDE\footnote{\url{http://netbeans.org}} has a refactoring (originally proposed
+by \citet{gyori2013}) that converts enhanced \lstinline{for} loops to a lambda
+expression.  This paper discusses our ongoing work in exploring the porting of
+such conversion mechanisms from NetBeans to the Eclipse IDE\@. 
 
 According to \citet{gyori2013}, making such changes manually would require
 changing approx.~1,700 line of non-commented, non-blank lines of code across
 approx.~100 files per project, on average. With our plug-in, Eclipse
-developers would not need to make these changes manually. 
-
-We are currently developing an Eclipse plug-in that will detect enhanced
-\lstinline{for} loops in Java code and will provide developers with different
-ways to convert it into a lambda expression.  More details can be found in
-Eclipse bug \#462725 (see
-\url{http://bugs.eclipse.org/bugs/show_bug.cgi?id=462725}).
+developers would not need to make these changes manually.  Our tool will help
+Eclipse developers adopt the functional-like programming model offered by Java
+8. Furthermore, we are in the process of exploring other Java 8 refactorings
+that do not currently exist in any IDE\@. More details can be found in Eclipse
+bug \#462725 (see \url{http://bugs.eclipse.org/bugs/show_bug.cgi?id=462725}).

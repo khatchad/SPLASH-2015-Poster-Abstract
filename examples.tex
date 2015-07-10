@@ -1,0 +1,51 @@
+\section{Examples}
+
+In this section, we will present several examples of how the final version of
+our plug-in will work on pre-Java 8 code. Assume we have a \lstinline{List},
+and suppose we wished to print each element of the list. In pre-Java 8,
+we can use the following enhanced \lstinline{for} loop to do so:
+
+\begin{lstlisting}
+for (String s : list) 
+    System.out.println(s);  
+\end{lstlisting}
+
+One possible refactoring of the above code to use lambda expressions is as follows:
+ 	
+\begin{lstlisting}
+list.forEach(s $\rightarrow$ System.out.println(s));  
+\end{lstlisting}
+
+Here, we call the new \lstinline{forEach()} method on the list, passing the
+lambda expression \lstinline{s $\rightarrow$ System.out.println(s)}, meaning that each
+\lstinline{String} in the list (each of which gets bound to \lstinline{s}) is
+passed to the \lstinline{println()} method. 
+
+Another possible lambda expression refactoring is as follows:
+
+\begin{lstlisting} 
+list.forEach(System.out::println); 
+\end{lstlisting}
+
+In this case, we again call the \lstinline{forEach()} on the list but this
+time, instead of passing a lambda expression, we pass a method reference, a
+new concept in Java 8 as well. Here, we refer to the \lstinline{println()}
+method of the \lstinline{PrintStream} class. When the lambda expression is
+processed, the \lstinline{println()} method is called on the object referred
+to by the \lstinline{out} variable.
+
+Yet, another possible refactoring is one where the new stream API, which
+allows for parallel processing, is used as follows:
+
+\begin{lstlisting} 
+list.stream().
+    forEach(System.out::println);
+\end{lstlisting}
+
+The above code sequentially processes the list, while the following code
+processes it in parallel:
+
+\begin{lstlisting} 
+list.parallelStream().
+    forEach(System.out::println);
+\end{lstlisting}

@@ -5,11 +5,13 @@
 \usepackage{wrapfig}
 
 %********** Miscellaneous **********
-\usepackage{amsmath,amssymb,amsthm,array,mdwmath,mdwtab,fixltx2e,url}
+\usepackage{amsmath,amssymb,amsthm,array,mdwmath,mdwtab,fixltx2e}
+\usepackage[hyphens]{url}
 \usepackage{breqn}
 \usepackage{subfigure}
 \usepackage[round-precision=2,round-mode=figures,scientific-notation=true]{siunitx}
 \sisetup{output-exponent-marker=\text{e}}
+\usepackage[T1]{fontenc}
 
 %********** PDF enhancements **********
 \usepackage[pdftex,bookmarks=true,linktocpage]{hyperref}
@@ -57,16 +59,16 @@
 \lstset{language=Java, 
     mathescape,
     tabsize=2, 
-    numbers=left, 
+    numbers=none, 
     xleftmargin=0.2in,
     numberstyle=\tiny, 
     %basicstyle=\footnotesize\ttfamily,
     basicstyle=\small\sffamily,
     escapechar=~,
     commentstyle=\it,
-    breaklines
-    % breakatwhitespace,
-    % breakindent=2ex
+    breaklines,
+    breakatwhitespace=true,
+    breakindent=2ex
 }
 
 %********** Algorithmic **********

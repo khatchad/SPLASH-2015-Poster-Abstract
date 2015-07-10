@@ -1,0 +1,32 @@
+\section{Implication and Preconditions}
+
+Although many enhanced \lstinline{for} loops can be converted to lambda
+expressions, there are some precondition to check. For example, lambda
+expression bodies cannot reference variables that are not \lstinline{final} or
+\emph{effectively} final~\cite{gosling2014java}\footnote{Variables referenced
+    in lambda expressions must either be marked as final or be effectively
+    final (i.e., no further writes to the variable are allowed once it has
+been initialized).}.  Below are some preconditions that must be followed
+before the lambda conversion~\cite{gyori2013}. 
+
+\begin{enumerate}
+
+    \item The conversion must be semantics-preserving. That is, the behavior
+        of the program prior to the refactoring must match that of after the
+        refactoring.
+
+    \item The \lstinline{for} loop must iterate over an instance of an
+        \lstinline{Iterable}.
+
+    \item The body of the initial \lstinline{for} loop must not throw a
+        checked exception. 
+
+    \item The body of the initial \lstinline{for} loop must not have more than
+        one reference to a local, non-effectively final variable defined
+        outside the loop.
+
+    \item The loop body must not contain a \lstinline{break},
+        \lstinline{continue} statement as these semantics cannot be expressed
+        via a lambda expression.  
+
+\end{enumerate}
