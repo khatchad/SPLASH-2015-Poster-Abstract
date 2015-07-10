@@ -38,8 +38,7 @@ Yet, another possible refactoring is one where the new stream API, which
 allows for parallel processing, is used as follows:
 
 \begin{lstlisting} 
-list.stream().
-    forEach(System.out::println);
+list.stream().forEach(System.out::println);
 \end{lstlisting}
 
 The above code sequentially processes the list, while the following code

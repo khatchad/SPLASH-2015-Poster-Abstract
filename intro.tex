@@ -13,12 +13,14 @@ facilitating functional programming. They also provide a concise way to write
 anonymous inner classes and make it easier to iterate through, filter, and
 exact data from a \lstinline{Collection}~\cite{lambdaqs}.
 
-Eclipse\footnote{\url{http://eclipse.org}} is one of the most popular IDEs for
+Eclipse (\url{http://eclipse.org}) is one of the most popular IDEs for
 Java. While Eclipse has incorporated several Java 8 feature
-quick-fixes\footnote{Quick-fixes in Eclipse are content-assisted completions
-that help developers maintain and improve their code.} and refactorings, there
+quick-fixes
+%\footnote{Quick-fixes in Eclipse are content-assisted completions
+%that help developers maintain and improve their code.} 
+and refactorings, there
 are still many features left to be done. For example, the NetBeans
-IDE\footnote{\url{http://netbeans.org}} has a refactoring (originally proposed
+IDE (\url{http://netbeans.org}) has a refactoring (originally proposed
 by \citet{gyori2013}) that converts enhanced \lstinline{for} loops to a lambda
 expression.  This paper discusses our ongoing work in exploring the porting of
 such conversion mechanisms from NetBeans to the Eclipse IDE\@. 
@@ -29,5 +31,6 @@ approx.~100 files per project, on average. With our plug-in, Eclipse
 developers would not need to make these changes manually.  Our tool will help
 Eclipse developers adopt the functional-like programming model offered by Java
 8. Furthermore, we are in the process of exploring other Java 8 refactorings
-that do not currently exist in any IDE\@. More details can be found in Eclipse
-bug \#462725 (see \url{http://bugs.eclipse.org/bugs/show_bug.cgi?id=462725}).
+that do not currently exist in any IDE\@. 
+%More details can be found in Eclipse bug \#462725 (see
+%\url{http://bugs.eclipse.org/bugs/show_bug.cgi?id=462725}).
