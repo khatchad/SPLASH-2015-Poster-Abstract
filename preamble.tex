@@ -1,0 +1,135 @@
+%********** Graphics **********
+\usepackage{xcolor}
+\usepackage{graphicx}
+\graphicspath{{graphics/}}
+\usepackage{wrapfig}
+
+%********** Miscellaneous **********
+\usepackage{amsmath,amssymb,amsthm,array,mdwmath,mdwtab,fixltx2e,url}
+\usepackage{breqn}
+\usepackage{subfigure}
+\usepackage[round-precision=2,round-mode=figures,scientific-notation=true]{siunitx}
+\sisetup{output-exponent-marker=\text{e}}
+
+%********** PDF enhancements **********
+\usepackage[pdftex,bookmarks=true,linktocpage]{hyperref}
+\hypersetup{pdfauthor={Md Arefin and Raffi Khatchadourian},
+	pdftitle={Porting the NetBeans Java 8 For Each Loop Lambda Expression Refactoring to Eclipse},
+	pdfsubject={Software Engineering},
+	pdfkeywords={automated,evolution,refactoring,integrated development environments,java}}
+\hypersetup{colorlinks=true,citecolor=blue}
+\usepackage{color}
+\usepackage[pdftex]{thumbpdf}
+
+%********** Enhanced lists **********
+\usepackage{enumitem}
+
+%********** Enhanced tables **********
+\usepackage{booktabs}
+
+%********** Natbib **********
+\usepackage[numbers,square,sort&compress]{natbib} 
+% \usepackage{natbibspacing}
+% \let \cite = \citep
+% \setcitestyle{aysep={}}
+% \makeatletter
+% \def\NAT@def@citea{\def\@citea{\NAT@separator}}
+% \makeatother
+
+%********** Saving paper **********
+% \newcommand{\subparagraph}{}
+% \usepackage{savetrees}
+% \usepackage[small,it]{caption}
+% \def\Section{\S}
+\def\Section{Section~}
+% \def\Figure{Fig.~}
+\def\Figure{Figure~}
+% \def\Example{Ex.~}
+\def\Example{Example~}
+% \def\Examples{\Example}
+\def\Examples{Examples~}
+% \renewcommand{\subsection}[1]{\textbf{\emph{#1.}}}
+% \setlist{noitemsep,nosep}
+% \usepackage[compact]{titlesec}
+
+%********** Listings **********
+\usepackage{listings}
+\lstset{language=Java, 
+    mathescape,
+    tabsize=2, 
+    numbers=left, 
+    xleftmargin=0.2in,
+    numberstyle=\tiny, 
+    %basicstyle=\footnotesize\ttfamily,
+    basicstyle=\small\sffamily,
+    escapechar=~,
+    commentstyle=\it,
+    breaklines
+    % breakatwhitespace,
+    % breakindent=2ex
+}
+
+%********** Algorithmic **********
+\usepackage{algorithmic}
+\algsetup{linenosize=\tiny,indent=.75em}
+
+%---------------------------------------------------------------------- Physics
+
+\newcommand{\Hamiltonian}{\mathcal{H}}
+\newcommand{\Lagrangian}{\mathcal{L}}
+\newcommand{\mean}[1]{\langle #1 \rangle}
+
+%------------------------------------------------------------------------- Sets
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\B}{\mathbb{B}}
+
+\newcommand{\emtyset}{\varnothing}
+
+\newcommand{\set}[1]{\ensuremath{\{#1\}}} 
+\newcommand{\sequence}[1]{\ensuremath{\langle#1\rangle}} 
+\newcommand{\Set}[1]{\ensuremath{\left\{#1\right\}}} 
+\newcommand{\cardinality}[1]{\ensuremath{\vert#1\vert}} 
+\newcommand{\suchthat}{\ensuremath{\bigm|}}
+\newcommand{\union}{\cup}
+\newcommand{\Union}{\bigcup}
+\newcommand{\intersection}{\cap}
+\newcommand{\Intersection}{\bigcap}
+\newcommand{\powerset}[1]{\ensuremath{\mathscr{P}(#1)}}
+\newcommand{\map}[3]{\ensuremath{#1\colon #2\to #3}}
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+
+%---------------------------------------------------------------------- Vectors
+\renewcommand{\vec}[1]{\bm{\mathrm{#1}}}
+\newcommand{\uvec}[1]{\vec{e}_{#1}}
+
+\newcommand{\ket}[1]{\, |#1\rangle}
+\newcommand{\bra}[1]{\langle~#1 |\,}
+
+\newcommand{\rr}{\vec{r}}
+\newcommand{\vv}{\vec{v}}
+\newcommand{\aaa}{\vec{a}}
+
+\newcommand{\zero}{\ensuremath{\mathbf{0}}}
+
+%------------------------------------------------------------------ Derivatives
+\newcommand{\D}[2]{\frac{d #1}{d #2}}
+\newcommand{\DD}[2]{\frac{d^2 #1}{d #2^2}}
+\newcommand{\PD}[2]{\frac{\partial~#1}{\partial~#2}}
+\newcommand{\PDD}[2]{\frac{\partial^2 #1}{\partial~#2^2}}
+
+%-------------------------------------------------------------------- Integrals
+\newcommand{\oiint}{\int\hspace{-2ex}\int\hspace{-3.04ex}\bigcirc~}
+\renewcommand{\iint}{\int\hspace{-1.5ex}\int}
+\renewcommand{\iiint}{\int\hspace{-1.5ex}\int\hspace{-1.5ex}\int}
+
+%-------------------------------------------------------------------- Proofs
+%\newtheorem{dfn}{Definition}
+\theoremstyle{remark}
+% \theoremstyle{definition}
+% \newtheorem{ex}{Example}[section]
+\newtheorem{ex}{Example}
