@@ -1,7 +1,7 @@
 \section{Eclipse Refactoring Model}
 
-This project involves developing a plug-in for Eclipse IDE\@. In order to do
-so, we need a clear understanding of how Eclipse refactorings work. 
+This project involves developing a refactoring plug-in for Eclipse, which work
+in the following way:
 
 \begin{figure}
     \centering
@@ -22,8 +22,8 @@ so, we need a clear understanding of how Eclipse refactorings work.
  \item The API for refactoring provides a process-level abstraction upon which
      specific refactorings may be built. 
 
- \item Figure~\ref{fig:refact_api} shows the elements of this abstraction at a
-     very high level.  Here, arrows between elements represent dependencies.
+ \item Figure~\ref{fig:refact_api} shows elements of this abstraction at a
+     high level. Arrows between elements represent dependencies.
 
  \item Once a refactoring has been initiated, an implementer of that
      refactoring is used to coordinate condition checking, gathering details
