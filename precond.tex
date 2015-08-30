@@ -3,8 +3,9 @@
 Although many enhanced \lstinline{for} loops can be converted to lambda
 expressions, there are some precondition to check. For example, lambda
 expression bodies cannot reference variables that are not \lstinline{final} or
-\emph{effectively} final (i.e., the variable \emph{could have} been marked as final)~\cite{gosling2014java}.  Below are some preconditions that must be followed
-before the lambda conversion~\cite{gyori2013}. 
+\emph{effectively} final (i.e., the variable \emph{could have} been marked as
+final)~\cite{gosling2014java}.  Below are some preconditions for the lambda
+conversion~\cite{gyori2013}. 
 
 \begin{enumerate}
 
@@ -32,5 +33,5 @@ before the lambda conversion~\cite{gyori2013}.
 From our experience, we believe that these preconditions are sufficient for
 the kinds of loops being refactored. It would also be possible to refactor
 loops over \lstinline{Iterable}s as it declares \lstinline{forEach()}.
-Moreover, it would be helpful to prove the soundness of the approach. We
-designate these tasks for future work.
+Moreover, it would be helpful to prove the soundness. We designate these tasks
+for future work.
