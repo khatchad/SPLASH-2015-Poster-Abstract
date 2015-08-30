@@ -1,6 +1,11 @@
 \section{Current State of Progress}
 
-Currently, we are in the process of finalizing the plug-in that will port the
-NetBeans refactoring implementation to Eclipse. We are identifying and
-implementing precondition checking code. The plug-in is open source and
+As we are making progress toward the implementation, one of the technical
+challenges we face is the difference between the Eclipse and NetBeans
+refactoring and source code representation models. The IDEs use different
+libraries for these purposes, e.g., NetBeans uses primarily javac libraries,
+while Eclipse uses the Java Development Tools (JDT).  For instance, NetBeans
+has API for retrieving uncaught exceptions in an AST subtree, while the JDT
+does not expose such external API\@. To check the corresponding precondition,
+we implemented this functionality ourselves.  The plug-in is open source and
 publicly available at \url{http://git.io/lambdarefact}.
