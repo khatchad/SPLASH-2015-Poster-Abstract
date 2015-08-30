@@ -12,8 +12,9 @@ before the lambda conversion~\cite{gyori2013}.
         of the program prior to the refactoring must match that of after the
         refactoring.
 
-    \item The \lstinline{for} loop must iterate over an instance of an
-        \lstinline{Iterable}.
+    \item The \lstinline{for} loop must iterate over an instance of a
+        \lstinline{Collection} as this is where \lstinline{stream()} is
+        declared.
 
     \item The body of the initial \lstinline{for} loop must not throw a
         checked exception. 
@@ -27,3 +28,9 @@ before the lambda conversion~\cite{gyori2013}.
         via a lambda expression.  
 
 \end{enumerate}
+
+From our experience, we believe that these preconditions are sufficient for
+the kinds of loops being refactored. It would also be possible to refactor
+loops over \lstinline{Iterable}s as it declares \lstinline{forEach()}.
+Moreover, it would be helpful to prove the soundness of the approach. We
+designate these tasks for future work.
